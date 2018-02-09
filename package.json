@@ -1,9 +1,9 @@
 {
   "name": "spark-plugin-datepicker",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "Cordova DatePicker Plugin",
   "cordova": {
-    "id": "flyacts-cordova-plugin-datepicker",
+    "id": "spark-plugin-datepicker",
     "platforms": [
       "ios",
       "android",
