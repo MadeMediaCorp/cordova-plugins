@@ -1,0 +1,6 @@
+language: objective-c
+osx_image: xcode9
+
+install: true
+before_install: ./travis/before_script.sh
+script: ./travis/script.sh

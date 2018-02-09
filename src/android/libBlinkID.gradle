@@ -1,0 +1,19 @@
+repositories {
+    jcenter()
+    mavenCentral()
+    maven { url 'http://maven.microblink.com' }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:27.0.0'
+    compile('com.microblink:blinkid:3.13.0@aar') {
+        transitive = false
+    }
+}
+
+android {
+  packagingOptions {
+    exclude 'META-INF/NOTICE'
+    exclude 'META-INF/LICENSE'
+  }
+}
