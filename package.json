@@ -1,9 +1,9 @@
 {
   "name": "spark-local-webserver",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "Cordova Local Web Server Plugin",
   "cordova": {
-    "id": "cordova-labs-local-webserver",
+    "id": "spark-local-webserver",
     "platforms": [
       "ios"
     ]
