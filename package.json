@@ -1,5 +1,5 @@
 {
-    "name": "Image fetcher backend multithreaded service to download an array of files",
+    "name": "spark-plugin-mass-image-fetcher",
     "version": "1.0.0",
     "description": "Image fetcher backend multithreaded service to download an array of files",
     "cordova": {
