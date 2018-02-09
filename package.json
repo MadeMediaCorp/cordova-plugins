@@ -1,5 +1,5 @@
 {
-  "name": "cordova-labs-local-webserver",
+  "name": "spark-local-webserver",
   "version": "2.4.1",
   "description": "Cordova Local Web Server Plugin",
   "cordova": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Collaborne/cordova-plugins.git"
+    "url": "git+https://github.com/MadeMediaCorp/cordova-plugins"
   },
   "keywords": [
     "cordova",
@@ -27,9 +27,9 @@
   "author": "",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Collaborne/cordova-plugins/issues"
+    "url": "https://github.com/MadeMediaCorp/cordova-plugins/issues"
   },
-  "homepage": "https://github.com/Collaborne/cordova-plugins#readme",
+  "homepage": "https://github.com/MadeMediaCorp/cordova-plugins#readme",
   "dependencies": {
     "urijs": "^1.17.1"
   }
