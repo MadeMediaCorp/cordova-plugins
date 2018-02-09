@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="spark-plugin-mass-image-fetcher" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Mass Image Fetcher</name>
+    <description>Image fetcher backend multithreaded service to download an array of files</description>
+    <repo>https://github.com/MadeMediaCorp/spark.git#plugin-mass-image-fetcher</repo>
+    
+    <!-- android -->
+    <platform name="android">
+        <js-module name="ImageFetcher" src="www/android/ImageFetcher.js">
+            <clobbers target="cordova.plugins.ImageFetcher"/>
+        </js-module>
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="ImageFetcher">
+                <param name="android-package" value="co.getmade.spark.plugins.ImageFetcher"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
+        <source-file src="src/android/ImageFetcher.java" target-dir="src/co/getmade/spark/plugins/"/>
+        <source-file src="src/android/Fetch.java" target-dir="src/co/getmade/spark/plugins/"/>
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ImageFetcher">
+                <param name="ios-package" value="ImageFetcher"/>
+            </feature>
+        </config-file>
+        
+        <js-module name="ImageFetcher" src="www/ios/ImageFetcher.js">
+            <clobbers target="cordova.plugins.ImageFetcher"/>
+        </js-module>
+        
+        <source-file src="src/ios/ImageFetcher.swift" />
+    </platform>
+</plugin>
