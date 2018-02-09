@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="spark-plugin-swiper" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>SparkSwiper</name>
+    <description>Swiper plugin w/ extra audio recording logic</description>
+    <repo>https://github.com/MadeMediaCorp/spark.git#plugin-swiper</repo>
+    
+    <js-module name="SparkSwiper" src="www/SparkSwiper.js">
+        <clobbers target="cordova.plugins.SparkSwiper" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="SparkSwiper">
+                <param name="ios-package" value="SparkSwiper" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/SparkSwiper-Bridging-Header.h" />
+        <header-file src="src/ios/AudioReaderSDKv2.00/AudioReaderSDK.h" />
+        <header-file src="src/ios/AudioReaderSDKv2.00/AudioReaderSDK+EMV.h" />
+        <header-file src="src/ios/AudioReaderSDKv2.00/AudioReaderSDK+RF.h" />
+        <header-file src="src/ios/AudioReaderSDKv2.00/EMVPrivateTags.h" />
+        <header-file src="src/ios/AudioReaderSDKv2.00/EMVTags.h" />
+        <source-file src="src/ios/AudioReaderSDKv2.00/libAudioReaderSDK.a" framework="true" />
+        <framework src="MediaPlayer.framework" />
+        <source-file src="src/ios/SparkSwiper.swift" />
+    </platform>
+</plugin>

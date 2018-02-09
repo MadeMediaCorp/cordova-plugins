@@ -1,0 +1,22 @@
+{
+    "name": "spark-plugin-swiper",
+    "version": "1.0.0",
+    "description": "Swiper plugin w/ extra audio recording logic",
+    "cordova": {
+        "id": "spark-plugin-swiper",
+        "platforms": [
+            "ios"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MadeMediaCorp/cordova-plugins"
+    },
+    "keywords": [
+        "cordova",
+        "ecosystem:cordova",
+        "cordova-ios"
+    ],
+    "license": "MIT",
+    "author": "Made Media Corp."
+}
