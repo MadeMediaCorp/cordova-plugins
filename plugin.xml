@@ -44,6 +44,10 @@
                 android:smallScreens="true" />
         </config-file>
 
+        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:name="android.support.multidex.MultiDexApplication" />
+        </edit-config>
+
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <activity
                     android:name="com.microblink.activity.ScanCard"
@@ -52,10 +56,6 @@
                     android:screenOrientation="portrait" >
             </activity>
         </config-file>
-
-        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
-            <application android:name="android.support.multidex.MultiDexApplication" />
-        </edit-config>
 
         <source-file src="src/android/java/com/phonegap/plugins/blinkid/BlinkIdScanner.java" target-dir="src/com/phonegap/plugins/blinkid" />
         <source-file src="src/android/java/com/phonegap/plugins/blinkid/FakeR.java" target-dir="src/com/phonegap/plugins/blinkid" />
