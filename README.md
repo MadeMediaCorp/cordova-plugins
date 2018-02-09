@@ -8,5 +8,6 @@ We currently use the following:
 - plugin-swiper (Custom)
 - plugin-mass-image-fetcher (Custom)
 - plugin-datepicker (Altered)
+- plugin-blink (Altered)
 
 Altered plugins were made due to limitations of PGB (Phonegap Build) not allowing hooks or plugins no longer being maintained.
