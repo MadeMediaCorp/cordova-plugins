@@ -1,0 +1,27 @@
+{
+  "name": "flyacts-cordova-plugin-datepicker",
+  "version": "0.9.4",
+  "description": "Cordova DatePicker Plugin",
+  "cordova": {
+    "id": "flyacts-cordova-plugin-datepicker",
+    "platforms": [
+      "ios",
+      "android",
+      "windows"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flyacts/cordova-plugin-datepicker.git"
+  },
+  "keywords": [
+    "cordova",
+    "datepicker",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android",
+    "cordova-windows"
+  ],
+  "author": "Vitalii Blagodir <vitalii.blagodir@gmail.com>",
+  "license": "Apache 2.0"
+}
