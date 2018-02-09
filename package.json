@@ -1,0 +1,26 @@
+{
+    "name": "spark-plugin-audio-recording",
+    "version": "1.0.0",
+    "description": "iOS/Android/Web plugin to record and provide audio file",
+    "cordova": {
+        "id": "spark-plugin-audio-recording",
+        "platforms": [
+            "android",
+            "ios",
+            "browser"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MadeMediaCorp/cordova-plugins"
+    },
+    "keywords": [
+        "cordova",
+        "ecosystem:cordova",
+        "cordova-android",
+        "cordova-ios",
+        "cordova-browser"
+    ],
+    "license": "MIT",
+    "author": "Made Media Corp."
+}

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="spark-plugin-audio-recording" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>AudioRecording</name>
+    <description>iOS/Android/Web plugin to record and provide audio file</description>
+    <repo>https://github.com/MadeMediaCorp/spark.git#plugin-audio-recording</repo>
+    
+    <!-- android -->
+    <platform name="android">
+        <js-module name="AudioRecording" src="www/android/AudioRecording.js">
+            <clobbers target="cordova.plugins.AudioRecording"/>
+        </js-module>
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="AudioRecording">
+                <param name="android-package" value="co.getmade.spark.plugins.AudioRecording"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+        </config-file>
+        <source-file src="src/android/AudioRecording.java" target-dir="src/co/getmade/spark/plugins/"/>
+        <resource-file src="src/android/res/drawable-hdpi/ic_stat_microphone.png" target="res/drawable-hdpi/ic_stat_microphone.png" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="SparkAudio">
+                <param name="ios-package" value="SparkAudio"/>
+            </feature>
+        </config-file>
+        
+        <js-module name="AudioRecording" src="www/ios/AudioRecording.js">
+            <clobbers target="cordova.plugins.AudioRecording"/>
+        </js-module>
+        
+        <config-file parent="NSMicrophoneUsageDescription" target="*-Info.plist">
+             <string>We need to use the microphone for voice recording.</string>
+        </config-file>
+        <config-file parent="UIBackgroundModes" target="*-Info.plist">
+            <array>
+                <string>audio</string>
+            </array>
+        </config-file>
+
+        <source-file src="src/ios/SparkAudio.swift" />
+    </platform>
+
+    <!-- browser -->
+    <platform name="browser">
+        <config-file target="config.xml" parent="/*" />
+
+        <asset src="www/browser/encoderWorker.min.js" target="plugins/spark-plugin-audio-recording/www/browser/encoderWorker.min.js" />
+        <js-module src="www/browser/recorder.js" name="Recorder">
+            <clobbers target="Recorder"/>
+        </js-module>
+
+        <js-module src="src/browser/AudioRecording.js" name="AudioRecording">
+            <clobbers target="cordova.plugins.AudioRecording"/>
+            <runs />
+        </js-module>
+    </platform>
+</plugin>
