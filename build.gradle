@@ -5,6 +5,8 @@ android {
     }
     dexOptions {
         javaMaxHeapSize "4g"
+        jumboMode true
+        preDexLibraries true
     }
     configurations { 
         //all*.exclude group: 'com.google.android.gms'
