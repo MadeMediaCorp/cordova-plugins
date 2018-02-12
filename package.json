@@ -1,6 +1,6 @@
 {
   "name": "spark-plugin-blinkid",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "description": "A small and powerful ID card scanning library - converted to inline sdk, isntead of submodule",
   "cordova": {
     "id": "spark-plugin-blinkid",

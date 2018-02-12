@@ -3,6 +3,9 @@ android {
         // Enabling multidex support.
         multiDexEnabled true
     }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
     configurations { 
         //all*.exclude group: 'com.google.android.gms'
         //all*.exclude group: 'com.android.support', module: 'support-v4'
