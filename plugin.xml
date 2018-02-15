@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="spark-plugin-firebase" version="0.1.25"
+<!--Current fire base version is 0.1.25 -->
+<plugin id="spark-plugin-firebase" version="0.1.26"
 xmlns="http://apache.org/cordova/ns/plugins/1.0"
 xmlns:android="http://schemas.android.com/apk/res/android">
 	<name>Google Firebase Plugin</name>
@@ -19,12 +20,6 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 				<param name="android-package" value="org.apache.cordova.firebase.FirebasePlugin" />
 				<param name="onload" value="true" />
 			</feature>
-		</config-file>
-		<config-file parent="/resources" target="res/values/strings.xml">
-			<string name="google_app_id">@string/google_app_id</string>
-		</config-file>
-		<config-file parent="/resources" target="res/values/strings.xml">
-			<string name="google_api_key">@string/google_api_key</string>
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/*">
 				<uses-permission android:name="android.permission.INTERNET" />
