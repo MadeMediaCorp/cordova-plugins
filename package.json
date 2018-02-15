@@ -5,13 +5,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arnesson/cordova-plugin-firebase"
+    "url": "https://github.com/MadeMediaCorp/cordova-plugins"
   },
-  "name": "cordova-plugin-firebase",
+  "name": "spark-plugin-firebase",
   "version": "0.1.25",
   "description": "Cordova plugin for Google Firebase",
   "cordova": {
-    "id": "cordova-plugin-firebase",
+    "id": "spark-plugin-firebase",
     "platforms": [
       "android",
       "ios",
